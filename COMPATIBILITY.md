@@ -13,7 +13,7 @@ Capabilities were checked against public sources on 29 Oct 2026. Tools change; c
 | Tool | Role in FCP | Status | Notes / source |
 |---|---|---|---|
 | Google Antigravity (desktop app) | Working agent | **Tested** | The original FCP run used it as the working agent. Google's [Drive MCP docs](https://developers.google.com/workspace/drive/api/guides/configure-mcp-server) also list Antigravity as an MCP host. |
-| Cursor | Working agent | Should work (untested) | Agent edits files in the workspace; also accepts the filesystem MCP server ([config list](https://top-mcps.com/llms-full.txt)). |
+| Cursor | Working agent | Should work (untested) | Agent edits files in the workspace; also accepts the filesystem MCP server ([config list](https://top-mcps.com/llms-full.txt)). Scheduled wake-up seen working by a user; full FCP run not yet tested. |
 | Windsurf (Cascade) | Working agent | Should work (untested) | Accepts the filesystem MCP server ([config list](https://top-mcps.com/llms-full.txt)). |
 | Claude Code | Working agent or supervisor | Should work (untested) | Edits local files; filesystem MCP setup in [this guide](https://www.verdent.ai/guides/filesystem-mcp-server). |
 | Codex CLI | Working agent or supervisor | Should work (untested) | Reads and edits files in a `workspace-write` sandbox ([OpenAI sandbox docs](https://learn.chatgpt.com/docs/sandboxing)). |
