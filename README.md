@@ -75,6 +75,8 @@ Creators rarely use one tool. A single project might touch a desktop chat app (C
 
 In this picture, Agada is the home base: it supervises the queue, checks the work, and keeps the project record. FCP itself is open and works with any supervisor. This describes how the protocol is designed to be used, not a shipped Agada feature.
 
+See [`examples/creator-week/`](examples/creator-week/) for a small fictional example.
+
 ## Built by the team behind Agada
 
 FCP came out of building [Agada](https://gabios.ai) at [GabiOS](https://gabios.ai), where we use it to hand overnight work to a desktop coding agent under the watch of a supervising assistant.
