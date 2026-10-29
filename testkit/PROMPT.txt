@@ -1,0 +1,17 @@
+You are testing FCP (File Context Protocol). The current folder (~/fcp-test) is your work queue.
+
+Rules:
+- Work ONLY inside this folder. Do not read, create or change anything outside it.
+- Do not use the network and do not install anything.
+- Read 00-START-HERE.md first and follow it.
+
+Then follow the Loop in WORK-TREE.md exactly:
+1. Re-read WORK-TREE.md from disk before each task and after each step. Do not rely on memory.
+2. Read the "## Messages from supervisor" section every cycle. Follow any message with "Status: open" and, after acting on it, change that line to "Status: ack".
+3. Take the first [ ] task whose dependencies are [x]. Mark it [~] and save WORK-TREE.md before you start.
+4. Do the task and write its output file in drafts/.
+5. Write reports/<ID>-REPORT.md: what you did, the files you wrote, and any message you followed.
+6. Mark the task [x] done <output file> (or [!] blocked: <reason>) and save WORK-TREE.md.
+7. Repeat until no eligible task is left, then write reports/DONE.md with a one-paragraph summary and stop.
+
+Change only the State and Note cells in the task table and the Status lines of messages. When finished, tell me in one line that you are done.
