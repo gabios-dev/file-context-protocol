@@ -1,6 +1,6 @@
 # Prompt: supervisor routine
 
-Schedule this every 10–20 minutes during the run window (in your assistant's routine feature, cron, etc.):
+Schedule this every 10–20 minutes while work is active (in your assistant's routine feature, cron, etc.):
 
 ```
 You supervise an FCP run in <handoff> for the repo(s) <repo paths>.
@@ -13,10 +13,10 @@ You supervise an FCP run in <handoff> for the repo(s) <repo paths>.
    Status: open
    Never edit the task table or task files. Put late content in <handoff>/inbox/.
 4. Notify the human only if something changed: a task done (with verified hash), blocked,
-   no progress for 45+ minutes, quota exhausted, or NIGHT-DONE.md written. Otherwise stay silent.
-5. After the scheduled wake-up time, confirm new commits or reports appeared; if not, alert the human
+   no progress for 45+ minutes, quota exhausted, or DONE.md written. Otherwise stay silent.
+5. Night mode only: after the scheduled wake-up time, confirm new commits or reports appeared; if not, alert the human
    with a one-line resume prompt they can paste.
 Never push, merge, deploy or change env vars. Never include secrets in messages.
 ```
 
-Morning summary (run once): list done tasks with verified hashes, tasks remaining or blocked with reasons, and everything that needs human approval.
+Summary (on request; in Night mode, every morning): list done tasks with verified hashes, tasks remaining or blocked with reasons, and everything that needs human approval.

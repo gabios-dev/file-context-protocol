@@ -1,9 +1,9 @@
-# Prompt: evening (working) agent
+# Prompt: working agent (any time)
 
 Paste into the desktop agent, replacing `<handoff>`:
 
 ```
-You are working unattended tonight. The folder <handoff> is your work queue.
+The folder <handoff> is your FCP work queue. Take only tasks assigned to you (or unassigned ones).
 1. Read <handoff>/00-START-HERE.md and follow its rules.
 2. <handoff>/WORK-TREE.md is the single source of truth. Follow its Loop exactly:
    re-read it from disk before each task and after each step, take the first [ ] task whose
@@ -14,6 +14,6 @@ You are working unattended tonight. The folder <handoff> is your work queue.
 4. Use content from <handoff>/content/. Never invent copy; use the task's fallback if missing.
 5. Never push, open PRs, merge, deploy, change environment variables or run migrations.
 6. Never claim a task is done without a real commit hash.
-7. When no eligible task remains, write <handoff>/reports/NIGHT-DONE.md and stop.
-Do not schedule anything for yourself. Start now with the first eligible task.
+7. When no eligible task remains, write <handoff>/reports/DONE.md and stop.
+Do not schedule anything for yourself (in Night mode a separate session handles wake-ups). Start now with the first eligible task.
 ```

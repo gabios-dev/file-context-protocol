@@ -2,7 +2,7 @@
 
 ## Loop
 1. Re-read this file from disk.
-2. Take the first `[ ]` task whose dependencies are all `[x]`. If none, write `reports/NIGHT-DONE.md` and stop.
+2. Take the first `[ ]` task whose dependencies are all `[x]`. If none, write `reports/DONE.md` and stop.
 3. Mark it `[~]`.
 4. Do it, committing after each stage.
 5. Write `reports/<ID>-REPORT.md`.

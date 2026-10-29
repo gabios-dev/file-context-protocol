@@ -1,4 +1,6 @@
-# Prompt: separate night (wake-up) agent
+# Prompt: Night mode — separate wake-up agent
+
+Only needed in Night mode, when the agent has a usage quota and a built-in scheduler.
 
 Open a **new, separate** agent session (not the one that is working). Replace `<handoff>` and `<HH:MM>` (quota renewal time plus a small margin):
 

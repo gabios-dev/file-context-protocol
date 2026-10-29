@@ -1,6 +1,6 @@
 # START HERE
 
-You are working unattended. `WORK-TREE.md` is the source of truth. Follow its loop.
+This folder is a shared FCP work queue. `WORK-TREE.md` is the source of truth. Follow its loop.
 
 ## Order
 Work tasks in the order listed in `WORK-TREE.md` (most important first).

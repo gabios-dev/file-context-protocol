@@ -3,6 +3,8 @@
 ## Loop
 (see templates/WORK-TREE.md)
 
+This is a Night mode example: the run happens unattended overnight. When no tasks remain, the agent writes `reports/DONE.md`.
+
 ## Tasks
 | ID | State | Task file | Repo / branch | Depends on | Note |
 |---|---|---|---|---|---|
