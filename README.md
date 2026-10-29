@@ -69,6 +69,12 @@ FCP isn't a replacement for MCP. It's for the gap MCP doesn't cover: agents lock
 - Never put secrets in the folder.
 - If the agent has a quota and a scheduler, the wake-up job belongs to a **separate agent session**. A session told to both keep working and wake later tends to park itself waiting for the reminder.
 
+## For creators: Agada and your other tools, side by side
+
+Creators rarely use one tool. A single project might touch a desktop chat app (Claude, ChatGPT), a coding agent (Cursor or another desktop agent), Canva exports, and a Drive-synced folder. FCP gives them one shared project queue: any tool that can read and write files can pick up a task from `WORK-TREE.md`, put its output in the folder, and hand the next step to another tool.
+
+In this picture, Agada is the home base: it supervises the queue, checks the work, and keeps the project record. FCP itself is open and works with any supervisor. This describes how the protocol is designed to be used, not a shipped Agada feature.
+
 ## Built by the team behind Agada
 
 FCP came out of building [Agada](https://gabios.ai) at [GabiOS](https://gabios.ai), where we use it to hand overnight work to a desktop coding agent under the watch of a supervising assistant.
