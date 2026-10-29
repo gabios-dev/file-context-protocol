@@ -67,6 +67,10 @@ The agent's loop: re-read `WORK-TREE.md` from disk → take the first `[ ]` task
 
 FCP isn't a replacement for MCP. It's for the gap MCP doesn't cover: agents locked inside a desktop app.
 
+## Compatibility
+
+Any tool that can read and write files can speak FCP. See [COMPATIBILITY.md](COMPATIBILITY.md) for the list, with what we have tested and what should work.
+
 ## Key rules
 
 - No push, merge, deploy, environment change or migration without explicit human approval.
