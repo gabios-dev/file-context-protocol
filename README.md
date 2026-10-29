@@ -21,7 +21,7 @@ Status: **v0.1 draft**. See [SPEC.md](SPEC.md).
 1. Create a shared folder outside any repo, e.g. `~/fcp-workspace/`.
 2. Copy everything from [`templates/`](templates/) into it and create `reports/` and `content/`.
 3. Write one task file per task from `TASK-TEMPLATE.md` (`G-01.md`, `G-02.md`, ...) and list them in `WORK-TREE.md`, most important first.
-4. Paste [`prompts/working-agent.md`](prompts/working-agent.md) into the desktop agent, and set up your supervisor with [`prompts/supervisor-routine.md`](prompts/supervisor-routine.md).
+4. Paste [`prompts/working-agent.md`](prompts/working-agent.md) into each agent, and set up your supervisor with [`prompts/supervisor-routine.md`](prompts/supervisor-routine.md).
 
 Examples: [`examples/creator-week/`](examples/creator-week/) (daytime handoffs between tools) and [`examples/overnight-run/`](examples/overnight-run/) (Night mode). Both are fictional.
 

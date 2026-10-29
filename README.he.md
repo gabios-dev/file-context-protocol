@@ -20,7 +20,7 @@
 
 ## התחלה מהירה (5 דקות)
 
-1. צרי תיקייה מחוץ לכל ריפו, למשל `~/agent-night/`.
+1. צרי תיקייה מחוץ לכל ריפו, למשל `~/fcp-workspace/`.
 2. העתיקי אליה את כל מה שב-[`templates/`](templates/), וצרי `reports/` ו-`content/`.
 3. כתבי קובץ לכל משימה לפי `TASK-TEMPLATE.md` (`G-01.md`, `G-02.md`...) ורשמי אותן ב-`WORK-TREE.md`, החשובה ראשונה.
 4. הדביקי את [`prompts/working-agent.md`](prompts/working-agent.md) בסוכן השולחני, והגדירי את המפקחת עם [`prompts/supervisor-routine.md`](prompts/supervisor-routine.md).
