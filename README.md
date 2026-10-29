@@ -13,15 +13,16 @@ Status: **v0.1 draft**. See [SPEC.md](SPEC.md).
 - **Any time, any tool.** Hand work between agents and tools during the day, in parallel or one after another, from one shared queue.
 - **Async supervision.** Check in when it suits you; the supervisor only flags changes.
 - **No integration needed.** If the agent can read and write files, it speaks FCP.
-- **Honest progress.** A task is "done" only with a real commit hash, and the supervisor checks that hash exists.
+- **Honest progress.** A task is "done" only with proof: a real commit hash, or (without git) the output file. The supervisor checks it exists.
 - **Survives interruptions.** One commit per step plus a task table on disk means quota cut-offs or crashes lose little.
 
-## Quick start (5 minutes)
+## Quick start (3 steps)
 
-1. Create a shared folder outside any repo, e.g. `~/fcp-workspace/`.
-2. Copy everything from [`templates/`](templates/) into it and create `reports/` and `content/`.
-3. Write one task file per task from `TASK-TEMPLATE.md` (`G-01.md`, `G-02.md`, ...) and list them in `WORK-TREE.md`, most important first.
-4. Paste [`prompts/working-agent.md`](prompts/working-agent.md) into each agent, and set up your supervisor with [`prompts/supervisor-routine.md`](prompts/supervisor-routine.md).
+1. Copy [`testkit/fcp-test/`](testkit/fcp-test/) to `~/fcp-test`.
+2. Open any file-capable agent in that folder and paste [`testkit/PROMPT.txt`](testkit/PROMPT.txt).
+3. Watch `WORK-TREE.md` change: tasks go `[ ]` → `[~]` → `[x]`, and reports appear in `reports/`.
+
+Ready for real work? Copy [`templates/`](templates/), write tasks, and use [`prompts/`](prompts/): [`working-agent.md`](prompts/working-agent.md) for each agent and [`supervisor-routine.md`](prompts/supervisor-routine.md) for your supervisor.
 
 Examples: [`examples/creator-week/`](examples/creator-week/) (daytime handoffs between tools) and [`examples/overnight-run/`](examples/overnight-run/) (Night mode). Both are fictional.
 
@@ -53,7 +54,7 @@ flowchart LR
     CM[Chat model, Stage 0] -- prepared copy / data --> C
 ```
 
-The agent's loop: re-read `WORK-TREE.md` from disk → take the first `[ ]` task whose dependencies are `[x]` → mark it `[~]` → work with a commit per step → write `reports/<ID>-REPORT.md` → mark `[x] done <hash>` or `[!] blocked: <reason>` → repeat. When nothing is left, write `reports/DONE.md` and stop.
+The agent's loop: re-read `WORK-TREE.md` from disk → take the first `[ ]` task whose dependencies are `[x]` → mark it `[~]` → work with a commit per step → write `reports/<ID>-REPORT.md` → mark `[x] done <ref>` (commit hash, or output file without git) or `[!] blocked: <reason>` → repeat. When nothing is left, write `reports/DONE.md` and stop.
 
 ## FCP vs. MCP, in plain words
 
@@ -65,18 +66,20 @@ The agent's loop: re-read `WORK-TREE.md` from disk → take the first `[ ]` task
 | Best for | Giving a model tools and data | Handing a whole work queue to an agent you can't drive remotely |
 | Direction | Model calls a server | Two agents leave notes for each other |
 
-FCP isn't a replacement for MCP. It's for the gap MCP doesn't cover: agents locked inside a desktop app.
+FCP isn't a replacement for MCP. It's for the gap MCP doesn't cover: agents locked inside a desktop app. More questions, including how FCP differs from browser-extension bridges: [FAQ.md](FAQ.md).
 
 ## Compatibility
 
 Any tool that can read and write files can speak FCP. See [COMPATIBILITY.md](COMPATIBILITY.md) for the list, with what we have tested and what should work.
 
+So far only two are tested: Google Antigravity as the working agent and a cloud supervising assistant. In Cursor a scheduled wake-up was seen working, but a full run is untested. Claude and Codex are untested. Used FCP with another tool? Add it via PR.
+
 ## Key rules
 
 - No push, merge, deploy, environment change or migration without explicit human approval.
-- Completion is claimed only with a real commit hash, and the supervisor verifies it.
+- Completion is claimed only with a real commit hash (or, without git, the output file), and the supervisor verifies it.
 - The supervisor writes only in the `## Messages from supervisor` section.
-- Never put secrets in the folder.
+- Never put secrets in the folder. See [SECURITY.md](SECURITY.md).
 - Night mode: if the agent has a quota and a scheduler, the wake-up job belongs to a **separate agent session**. A session told to both keep working and wake later tends to park itself waiting for the reminder.
 
 ## For creators: Agada and your other tools, side by side
@@ -93,4 +96,4 @@ FCP came out of building [Agada](https://gabios.ai) at [GabiOS](https://gabios.a
 
 ## License
 
-MIT, see [LICENSE](LICENSE). Contributions welcome, see [CONTRIBUTING.md](CONTRIBUTING.md). עברית: [README.he.md](README.he.md).
+MIT, see [LICENSE](LICENSE). Changes: [CHANGELOG.md](CHANGELOG.md). Contributions welcome, see [CONTRIBUTING.md](CONTRIBUTING.md). עברית: [README.he.md](README.he.md).

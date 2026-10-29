@@ -13,12 +13,12 @@ Capabilities were checked against public sources on 29 Oct 2026. Tools change; c
 | Tool | Role in FCP | Status | Notes / source |
 |---|---|---|---|
 | Google Antigravity (desktop app) | Working agent | **Tested** | The original FCP run used it as the working agent. Google's [Drive MCP docs](https://developers.google.com/workspace/drive/api/guides/configure-mcp-server) also list Antigravity as an MCP host. |
-| Cursor | Working agent | Should work (untested) | Agent edits files in the workspace; also accepts the filesystem MCP server ([config list](https://top-mcps.com/llms-full.txt)). Scheduled wake-up seen working by a user; full FCP run not yet tested. |
-| Windsurf (Cascade) | Working agent | Should work (untested) | Accepts the filesystem MCP server ([config list](https://top-mcps.com/llms-full.txt)). |
-| Claude Code | Working agent or supervisor | Should work (untested) | Edits local files; filesystem MCP setup in [this guide](https://www.verdent.ai/guides/filesystem-mcp-server). |
+| Cursor | Working agent | Should work (untested) | Agent edits files in the workspace and can use MCP servers such as the filesystem server ([Cursor MCP docs](https://cursor.com/docs/mcp)). Scheduled wake-up seen working (one user report); full FCP run not yet tested. |
+| Windsurf (Cascade) | Working agent | Should work (untested) | Can use MCP servers such as the filesystem server ([Windsurf MCP docs](https://docs.windsurf.com/windsurf/cascade/mcp)). |
+| Claude Code | Working agent or supervisor | Should work (untested) | Edits local files and can use MCP servers ([Claude Code MCP docs](https://code.claude.com/docs/en/mcp)). |
 | Codex CLI | Working agent or supervisor | Should work (untested) | Reads and edits files in a `workspace-write` sandbox ([OpenAI sandbox docs](https://learn.chatgpt.com/docs/sandboxing)). |
-| Gemini CLI | Working agent | Should work (untested) | Google announced Gemini CLI is moving to Antigravity CLI, and it stopped serving some account types on 18 Jun 2026 ([summary](https://hidekazu-konishi.com/entry/cli_coding_agents_comparison.html)). Check availability for your account. |
-| Cline (VS Code extension) | Working agent | Should work (untested) | "Cline can create and edit files directly in your editor" ([extension page](https://marketplace.windsurf.com/extension/saoudrizwan/claude-dev)). |
+| Gemini CLI | Working agent | Should work (untested) | Check Google's current docs for availability. |
+| Cline (VS Code extension) | Working agent | Should work (untested) | "Cline can create and edit files directly in your editor" ([VS Code Marketplace page](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev)). |
 | Kiro | Working agent | Should work (untested) | Custom agents with `read`/`write` tool access; hooks trigger on file events ([Kiro 1.0 changelog](https://kiro.dev/changelog/ide/1-0/)). |
 
 ## Chat apps with file access
@@ -35,7 +35,7 @@ Capabilities were checked against public sources on 29 Oct 2026. Tools change; c
 ## Automation (via synced-folder file triggers)
 | Tool | Role in FCP | Status | Notes / source |
 |---|---|---|---|
-| Make | Notifier / mover | Should work (untested) | Google Drive "Watch Files in a Folder" trigger ([listing](https://integrations.salesflare.com/listings/google-drive/)). |
+| Make | Notifier / mover | Should work (untested) | Google Drive "Watch Files in a Folder" trigger ([Make Google Drive app docs](https://apps.make.com/google-drive)). |
 | Zapier | Notifier / mover | Should work (untested) | Google Drive "New File in Folder" and "Updated File" triggers ([Zapier page](https://zapier.com/apps/google-drive/integrations/anthropic-claude)). Polls every 15 min on the Free plan. Dropbox trigger: **unverified** (no primary source checked). |
 | n8n | Notifier / mover | Should work (untested) | Local File Trigger watches a file or folder for add/change/delete ([source](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/LocalFileTrigger/LocalFileTrigger.node.ts)). Drive/Dropbox triggers: unverified. |
 

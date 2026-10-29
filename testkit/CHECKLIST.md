@@ -2,7 +2,7 @@
 
 Answer yes / no (add a note if you like).
 
-1. Did Codex re-read `WORK-TREE.md` from disk during the run (not just once)? yes / no / not sure
+1. Did the agent re-read `WORK-TREE.md` from disk during the run (not just once)? yes / no / not sure
 2. Was each task marked `[~]` first and then `[x] done ...`? yes / no
 3. Were `reports/T-01-REPORT.md` and `reports/T-02-REPORT.md` written? yes / no
 4. Was `reports/DONE.md` written at the end? yes / no
@@ -13,7 +13,7 @@ Answer yes / no (add a note if you like).
 9. Anything weird, surprising or annoying?
 
 ## About your setup
-- Tool: Codex CLI / ChatGPT desktop (Codex) / other: ____
+- Tool: Codex CLI / ChatGPT desktop (Codex) / Claude / Cursor / other: ____
 - Version (if you know it): ____
 - Model (if shown): ____
 - OS: macOS / Windows / Linux, version: ____
@@ -22,3 +22,6 @@ Answer yes / no (add a note if you like).
 ## Credit
 May we credit you in COMPATIBILITY.md? yes / no
 Name or handle to show: ____
+
+## Where to send it
+Open an issue using the "Test report" template, or email office@gabios.ai.

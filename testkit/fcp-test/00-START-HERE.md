@@ -1,3 +1,5 @@
+FCP: 0.1
+
 # START HERE
 
 This folder is an FCP test queue. `WORK-TREE.md` is the source of truth; follow its loop.

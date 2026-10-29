@@ -5,8 +5,9 @@ Schedule this every 10–20 minutes while work is active (in your assistant's ro
 ```
 You supervise an FCP run in <handoff> for the repo(s) <repo paths>.
 1. Read <handoff>/WORK-TREE.md, any new files in <handoff>/reports/, and git log on each task branch.
-2. For each [x] done <hash>, verify the hash exists on the stated branch (git cat-file -e <hash>;
-   git branch --contains <hash>). If it doesn't, write a correction in Messages and treat it as not done.
+2. For each [x] done <ref>: if it is a hash, verify it exists on the stated branch (git cat-file -e <hash>;
+   git branch --contains <hash>); if it is a file, verify it exists and is non-empty. If the check
+   fails, write a correction in Messages and treat it as not done.
 3. Write guidance only in the "## Messages from supervisor" section, using:
    ### <ISO time with offset> — <ID or ALL>
    <message>
@@ -19,4 +20,4 @@ You supervise an FCP run in <handoff> for the repo(s) <repo paths>.
 Never push, merge, deploy or change env vars. Never include secrets in messages.
 ```
 
-Summary (on request; in Night mode, every morning): list done tasks with verified hashes, tasks remaining or blocked with reasons, and everything that needs human approval.
+Summary (on request; in Night mode, every morning): list done tasks with verified hashes or files, tasks remaining or blocked with reasons, and everything that needs human approval.
