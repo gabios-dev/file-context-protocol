@@ -68,6 +68,16 @@ The agent's loop: re-read `WORK-TREE.md` from disk → take the first `[ ]` task
 
 FCP isn't a replacement for MCP. It's for the gap MCP doesn't cover: agents locked inside a desktop app. More questions, including how FCP differs from browser-extension bridges: [FAQ.md](FAQ.md).
 
+## Monitor from your phone (Antigravity Remote Control)
+
+Antigravity has a built-in Remote Control that lets you watch and drive your local Antigravity agents from another device.
+
+**Turn it on:** Antigravity → Settings → Application → Remote Control → enable **"Enable Remote Control"**. Then scan the QR code, or copy the link and open it in your phone's browser. You can give the device a name (Device Name), and more than one device can connect.
+
+**Keep it running:** the computer and Antigravity must stay on and open. Tip: in the same Application settings, **"Prevent Sleep"** keeps the computer awake while the app runs.
+
+**How it fits FCP:** Remote Control is a remote screen for one tool, so it uses the same tokens and quota. FCP lets the work move to another tool when one runs out of tokens, through the shared folder and its written rules. Together, FCP keeps the work going across agents, and Remote Control lets you check in and approve from your phone. Approvals still follow FCP's approval rules.
+
 ## Compatibility
 
 Any tool that can read and write files can speak FCP. See [COMPATIBILITY.md](COMPATIBILITY.md) for the list, with what we have tested and what should work.

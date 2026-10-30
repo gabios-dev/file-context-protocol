@@ -57,3 +57,7 @@ Sync is not instant. Keep one writer per section (see SPEC §3.3), and re-read f
 
 ## Add your tool via PR
 Used FCP with a tool not listed, or tested one marked untested? Open a PR that edits this file with: the tool and version, the role it played, what worked and what didn't, and a link to the docs for its file access. Please don't change a status to **Tested** without a real run.
+
+## Antigravity Remote Control
+
+To check in on Antigravity agents from your phone, enable Settings → Application → Remote Control → "Enable Remote Control" and scan the QR code (turn on "Prevent Sleep" to keep the computer awake). It is a remote screen for the same tool and quota; FCP still handles moving work between agents, and approvals still follow FCP's rules. See the README section "Monitor from your phone".
