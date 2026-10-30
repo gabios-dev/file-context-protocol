@@ -78,6 +78,10 @@ Antigravity has a built-in Remote Control that lets you watch and drive your loc
 
 **How it fits FCP:** Remote Control is a remote screen for one tool, so it uses the same tokens and quota. FCP lets the work move to another tool when one runs out of tokens, through the shared folder and its written rules. Together, FCP keeps the work going across agents, and Remote Control lets you check in and approve from your phone. Approvals still follow FCP's approval rules.
 
+## Run the agent headless (optional)
+
+If your agent has a CLI print mode, the supervisor can launch it on a schedule with strict allow/deny permissions, so no one has to paste the next prompt. See [docs/headless-agent-runner.md](docs/headless-agent-runner.md) and [`examples/agy-runner/`](examples/agy-runner/).
+
 ## Compatibility
 
 Any tool that can read and write files can speak FCP. See [COMPATIBILITY.md](COMPATIBILITY.md) for the list, with what we have tested and what should work.

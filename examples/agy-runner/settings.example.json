@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "command(regex:^git (status|diff|log|show|branch|checkout|switch|add|commit|rev-parse|stash)( .*)?$)",
+      "command(regex:^npx (vitest|tsc)( .*)?$)",
+      "command(regex:^npm (test|run (test|typecheck|lint))( .*)?$)",
+      "command(regex:^node( .*)?$)",
+      "command(regex:^(ls|cat|head|tail|wc|grep|rg|find|pwd|echo)( .*)?$)"
+    ],
+    "deny": [
+      "command(regex:^git (push|merge|rebase|remote|config)( .*)?$)",
+      "command(regex:^git reset --hard( .*)?$)",
+      "command(regex:^vercel( .*)?$)",
+      "command(regex:^supabase db push( .*)?$)",
+      "command(regex:.*rm -rf.*)"
+    ]
+  }
+}
